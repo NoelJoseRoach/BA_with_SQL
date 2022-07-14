@@ -1,0 +1,15 @@
+SELECT * FROM  Supermarket_sales 
+ORDER BY Unitprice DESC LIMIT 1;
+SELECT max(Unitprice),min(Unitprice),avg(Unitprice) FROM Supermarket_sales
+ORDER BY Unitprice DESC  LIMIT 1;
+SELECT max(Quantity),min(Quantity),avg(Quantity) FROM Supermarket_sales
+ORDER BY Quantity DESC  LIMIT 1;
+SELECT Productline,max(Quantity),min(Quantity),avg(Quantity) FROM Supermarket_sales
+GROUP BY Productline
+SELECT Productline,max(Unitprice),min(Unitprice),avg(Unitprice) FROM Supermarket_sales
+GROUP BY Productline;
+
+SELECT count(Gender),(Productline) FROM Supermarket_sales
+WHERE Gender="Male";
+SELECT count(Gender),Productline FROM Supermarket_sales
+WHERE Gender="Female" AND Productline="Fashion accessories" AND Productline="Sports and travel";
