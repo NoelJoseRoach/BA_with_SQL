@@ -1,0 +1,23 @@
+SELECT count(Employee_Name),Position FROM HRDataset_v14
+WHERE Position='Production Technician I';
+
+SELECT count(EmpID),Sex FROM HRDataset_v14
+WHERE GenderID='1';
+
+SELECT Employee_Name FROM HRDataset_v14
+WHERE ManagerName='Michael Albert';
+
+SELECT Employee_Name,EmploymentStatus FROM HRDataset_v14
+WHERE EmploymentStatus='Active';
+
+SELECT Employee_Name,EmploymentStatus,MaritalDesc FROM HRDataset_v14
+WHERE EmploymentStatus='Active' AND MaritalDesc='Married';
+
+SELECT Employee_Name,Salary,EmploymentStatus FROM HRDataset_v14
+WHERE EmploymentStatus='Active' AND Salary<=60000;
+
+SELECT Position,EngagementSurvey FROM HRDataset_v14
+WHERE Position='Production Technician II'; 
+ORDER BY DESC EngagementSurvey;
+
+SELECT Position,max(Salary) FROM HRDataset_v14;
