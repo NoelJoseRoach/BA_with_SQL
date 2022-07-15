@@ -1,0 +1,20 @@
+ALTER TABLE COMPANY
+RENAME TO "Supermarket_sales";
+
+SELECT total(Tax) FROM Supermarket_sales
+WHERE City="Yangon";
+
+SELECT sum(Quantity) FROM Supermarket_sales
+WHERE City="Yangon" or City="Mandalay";
+
+SELECT max(gross_margin_percentage),Branch,InvoiceID FROM Supermarket_sales;
+
+SELECT max(gross_margin_percentage), Gender FROM Supermarket_sales;
+
+SELECT max(gross_iincome),Customertype FROM Supermarket_sales;
+
+SELECT InvoiceID,min(gross_iincome) FROM Supermarket_sales;
+
+SELECT Rating,Unitprice,max(Gender) FROM Supermarket_sales;
+
+SELECT max(Rating),Branch,City FROM Supermarket_sales;
