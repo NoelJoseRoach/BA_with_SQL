@@ -21,3 +21,37 @@ WHERE Position='Production Technician II';
 ORDER BY DESC EngagementSurvey;
 
 SELECT Position,max(Salary) FROM HRDataset_v14;
+
+SELECT Employee_Name,Salary FROM HRDataset_v14 WHERE Salary<69020;
+
+SELECT Employee_Name,Salary,EmpSatisfaction FROM HRDataset_v14
+WHERE Salary<69020 AND EmpSatisfaction=1;
+
+SELECT count(Employee_Name) FROM HRDataset_v14;
+
+SELECT count(Employee_Name),PerfScoreID FROM HRDataset_v14
+WHERE PerformanceScore>3;
+
+SELECT count(Employee_Name),EmpStatusID FROM HRDataset_v14
+WHERE EmpStatusID=5;
+
+SELECT count(Department),Department FROM HRDataset_v14
+WHERE Department='IT/IS';
+
+SELECT count(Department) FROM HRDataset_v14;
+WHERE Department='Software Engineering';
+
+SELECT count(Department) FROM HRDataset_v14;
+WHERE Department='Admin Offices';
+
+SELECT EmpID,PerfScoreID FROM HRDataset_v14
+ORDER BY PerfScoreID;
+
+SELECT Employee_Name,FromDiversityJobFairID FROM HRDataset_v14
+WHERE FromDiversityJobFairID=1;
+
+SELECT Employee_Name,FromDiversityJobFairID FROM HRDataset_v14
+WHERE Employee_Name='King, Janet';
+
+SELECT count(Employee_Name),Termd FROM HRDataset_v14
+WHERE Termd=1;
